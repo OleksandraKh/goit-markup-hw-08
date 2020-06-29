@@ -1,0 +1,22 @@
+.header-logo {
+  @extend %style-logo;
+  color: $accent-color;
+  padding-top: 24px;
+  padding-bottom: 25px;
+  
+  .accent {
+    color: $titleText-color;
+  }
+  
+}
+
+.footer-logo {
+  @extend %style-logo;
+  color: $accent-color;
+  display: inline-flex;
+  
+
+  .accent {
+    color: $primaryWhite-color;
+  }
+}

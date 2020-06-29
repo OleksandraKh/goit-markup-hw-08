@@ -1,0 +1,46 @@
+%link {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-decoration: none;
+    
+}
+
+%style-header{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 1.14;
+    color: $primaryText-color;
+    
+}
+
+%style-logo{
+  font-family: $fontFamily;
+  font-weight: $logoWeight;
+  font-size: $logoSize;
+}
+%text-styleHero{
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.37;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+%text-title{
+  font-style: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  margin-bottom: 50px;
+}
+
+%button {
+  border-radius: 4px;
+  padding: 10px 32px;
+  min-width: 200px;
+  color: $primaryWhite-color;
+  background-color: $accent-color;
+  border: 1px solid transparent;
+  font-weight: 700;
+}
