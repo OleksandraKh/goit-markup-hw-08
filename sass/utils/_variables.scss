@@ -38,67 +38,6 @@ body {
   visibility: hidden;
 }
 
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-  border: 2px;
-}
-
-.container {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 15px;
-  padding-right: 15px;
-  width: 1200px;
-}
-
-.header-container {
-  display: flex;
-}
-
-.section-container {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-  width: 1200px;
-  justify-content: center;
-}
-
-.features-container {
-  display: flex;
-}
-
-.customer-container {
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-  width: 1200px;
-  text-align: center;
-}
-.team-container {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-  width: 1200px;
-  justify-content: center;
-}  
 
 footer {
   margin-top: 0;
@@ -108,43 +47,14 @@ footer {
   background-color: #2f303a;
 }
 
-.footer-container {
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 15px;
-  padding-right: 15px;
-  width: 1200px;
-}
-
-.container-portfolio {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-  width: 1200px;
-}
-
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: auto;
-  margin-right: auto;
-  width: 1200px;
-  justify-content: space-between;
-  
-}
-
-.portfolio::after,
-.studio::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 4px;
-  position: absolute;
-  bottom: -1px;
-  background-color: $accent-color;
-  border-radius: 2px;
-}
+// .portfolio::after,
+// .studio::after {
+//   content: "";
+//   display: block;
+//   width: 100%;
+//   height: 4px;
+//   position: absolute;
+//   bottom: -1px;
+//   background-color: $accent-color;
+//   border-radius: 2px;
+// }

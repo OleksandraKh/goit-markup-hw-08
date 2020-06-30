@@ -1,22 +1,28 @@
 .header-logo {
-  @extend %style-logo;
-  color: $accent-color;
-  padding-top: 24px;
-  padding-bottom: 25px;
-  
-  .accent {
-    color: $titleText-color;
+    @extend %style-logo;
+    color: $accent-color;
+        
+    .accent {
+      color: $titleText-color;
+    }
+    
   }
-  
-}
 
-.footer-logo {
-  @extend %style-logo;
-  color: $accent-color;
-  display: inline-flex;
-  
+  @media screen and (min-width: 480px){
+       .header-logo {
+            padding-top: 16px;
+            padding-left: 15px;
+        }
+    }
 
-  .accent {
-    color: $primaryWhite-color;
-  }
-}
+    
+//   .footer-logo {
+//     @extend %style-logo;
+//     color: $accent-color;
+//     // display: inline-flex;
+    
+  
+//     .accent {
+//       color: $primaryWhite-color;
+//     }
+//   }
