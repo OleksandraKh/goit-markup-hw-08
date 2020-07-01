@@ -13,16 +13,26 @@
             padding-top: 16px;
             padding-left: 15px;
         }
+    
+  @media screen and (min-width: 768px){
+        .header-logo {
+            padding-top: 26px;
+            padding-left: 26px;
     }
+}
 
-    
-//   .footer-logo {
-//     @extend %style-logo;
-//     color: $accent-color;
-//     // display: inline-flex;
-    
+  @media screen and (min-width: 1200px){
+        .header-logo {
+            padding-top: 24px;
+            padding-left: 25px;
+    }
+}
   
-//     .accent {
-//       color: $primaryWhite-color;
-//     }
-//   }
+  .footer-logo {
+    @extend %style-logo;
+    color: $accent-color;
+   
+    .accent {
+      color: $primaryWhite-color;
+    }
+  }

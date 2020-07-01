@@ -22,17 +22,20 @@
 }
 %text-styleHero{
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.37;
+  font-size: 26px;
+  line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
 %text-title{
+  text-align: center;
   font-style: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.17;
-  margin-bottom: 50px;
+  margin: 0;
+  padding-top: 60px;
+  padding-bottom: 30px;
 }
 
 %button {
