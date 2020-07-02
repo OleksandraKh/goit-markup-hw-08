@@ -25,13 +25,13 @@ footer {
   background-color: #2f303a;
 }
 
-.header-logo, .feature-set {
+.header-logo, .feature-set, .team-set, .team-icon, .customer-set {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.is-hidden {
+.feature h2 {
   margin-top: 0;
   margin-bottom: 0;
   visibility: hidden;
@@ -52,7 +52,6 @@ footer {
 }
 
 .team-title, .customer-title {
-  text-align: center;
   font-style: 700;
   font-size: 28px;
   line-height: 1.17;
@@ -401,7 +400,9 @@ summary {
 }
 
 .hero-section {
-  margin: 0;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
   padding-bottom: 0;
   background-color: #757575;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.8)), to(rgba(47, 48, 58, 0.8))), url("../images/header_img.jpg");
@@ -425,10 +426,8 @@ summary {
 
 @media screen and (min-width: 1200px) {
   .hero-section {
-    width: 1600px;
+    width: 1200px;
     height: 600px;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 
@@ -584,38 +583,40 @@ summary {
   }
 }
 
-.features-card {
+.feature-card {
   padding-top: 0;
   padding-bottom: 0;
 }
 
 @media screen and (min-width: 480px) {
-  .features-card {
-    width: 450px;
+  .feature-card {
     margin-bottom: 30px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .features-card {
-    width: 354px;
+  .feature-card {
     width: calc((100% - 4 * 15px) / 2);
     margin: 15px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .features-card {
-    width: 270px;
-    width: calc((100% - 6 * 15px) / 4);
-    margin: 15px;
-  }
-  .features-card:first-child {
-    margin: 0px;
+  .feature-card {
+    width: calc((100% - 6 * 10px) / 4);
+    margin: 10px;
   }
 }
 
-.features-card .features-title {
+.feature-card:first-child {
+  margin-left: 0px;
+}
+
+.feature-card:last-child {
+  margin-right: 0px;
+}
+
+.feature-title {
   margin-bottom: 10px;
   margin-top: 30px;
   color: #212121;
@@ -623,59 +624,131 @@ summary {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
-  text-align: center;
 }
 
-.features-card .features-text {
-  margin-top: 0;
-  margin-bottom: 0;
+@media screen and (max-width: 767px) {
+  .feature-title {
+    text-align: center;
+  }
+}
+
+.feature-title .feature-text {
+  margin: 0;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
   color: #757575;
 }
 
-.features-card .icon-antena,
-.features-card .icon-clock,
-.features-card .icon-diagram,
-.features-card .icon-astronaut {
+.icon-antena,
+.icon-clock,
+.icon-diagram,
+.icon-astronaut {
   display: block;
-  width: 450px;
+  margin: 0;
   height: 120px;
   background: #f5f4fa;
-  padding: 25px 190px;
   border-radius: 4px;
 }
 
+@media screen and (min-width: 480px) {
+  .icon-antena,
+  .icon-clock,
+  .icon-diagram,
+  .icon-astronaut {
+    width: 450px;
+    padding: 25px 190px;
+  }
+}
+
 @media screen and (min-width: 768px) {
-  .features-card .icon-antena,
-  .features-card .icon-clock,
-  .features-card .icon-diagram,
-  .features-card .icon-astronaut {
+  .icon-antena,
+  .icon-clock,
+  .icon-diagram,
+  .icon-astronaut {
     width: 354px;
     padding: 25px 142px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .features-card .icon-antena,
-  .features-card .icon-clock,
-  .features-card .icon-diagram,
-  .features-card .icon-astronaut {
+  .icon-antena,
+  .icon-clock,
+  .icon-diagram,
+  .icon-astronaut {
     width: 270px;
     padding: 25px 100px;
   }
 }
 
+.team-title {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 1200px) {
+  .team-title {
+    padding-top: 94px;
+    padding-bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .team-set {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team-set {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 .team-card {
-  margin-bottom: 30px;
   background: #ffffff;
   -webkit-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
-.team-card:last-child {
-  margin-bottom: 0;
+@media screen and (min-width: 480px) {
+  .team-card {
+    width: 450px;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .team-card {
+    width: 354px;
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team-card {
+    width: 270px;
+    width: calc((100% - 6 * 10px) / 4);
+    margin: 10px;
+  }
+  .team-card:first-child {
+    margin-right: 0px;
+  }
+  .team-card:last-child {
+    margin-right: 0px;
+  }
 }
 
 .team-subtitle {
@@ -706,12 +779,32 @@ summary {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
   padding-bottom: 24px;
 }
 
 .team-icon-instagram, .team-icon-twitter, .team-icon-facebook, .team-icon-linkedin {
   width: 20px;
   background-size: contain;
+}
+
+@media screen and (min-width: 480px) {
+  img {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  img {
+    width: 354px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  img {
+    width: 270px;
+  }
 }
 
 .icon-link {
@@ -752,8 +845,21 @@ summary {
   fill: #ffffff;
 }
 
-@media screen and (min-width: 480px) {
-  .customer {
+.customer-title {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 1200px) {
+  .customer-title {
+    padding-top: 94px;
+    padding-bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .customer-set {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -762,7 +868,17 @@ summary {
   }
 }
 
-.customer-logo {
+@media screen and (min-width: 1200px) {
+  .customer-set {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.customer-set-logo {
   width: calc((100% - 4 * 15px) / 2);
   margin: 15px;
   height: 90px;
@@ -777,12 +893,12 @@ summary {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.customer-logo:hover, .customer-logo:focus {
+.customer-set-logo:hover, .customer-set-logo:focus {
   border: 1px solid #2196f3;
   fill: #2196f3;
 }
 
-.customer-link {
+.customer-set-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -11,7 +11,7 @@
   margin: 0;
 }
 
-.is-hidden{
+%is-hidden{
   margin-top: 0;
   margin-bottom: 0;
   visibility: hidden;
@@ -41,7 +41,7 @@
 }
 
 %text-title{
-  text-align: center;
+  // text-align: center;
   font-style: 700;
   font-size: 28px;
   line-height: 1.17;

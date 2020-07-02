@@ -30,7 +30,10 @@
  
 
   .hero-section {
-    margin: 0;
+    max-width: 1600px;
+    margin-left: auto;
+      margin-right: auto;
+  
     padding-bottom: 0;
     background-color: $primaryText-color;
     background-image: linear-gradient(
@@ -41,28 +44,25 @@
       url("../images/header_img.jpg");
       text-align: center;
   }
-  @media screen and (min-width: 480px){
-  
-    .hero-section {
-      width: 480px;
-      height: 400px;
-      
-    }
-  }
-    
-      
-@media screen and (min-width: 768px){
-  .hero-section {
-      width: 768px;
-      height: 400px;
-  }
- }
 
-@media screen and (min-width: 1200px){
-  .hero-section {
-      width: 1600px;
-      height: 600px;
-      margin-left: auto;
-      margin-right: auto;
-  }
-}
+
+      @media screen and (min-width: 480px){
+        .hero-section {
+          width: 480px;
+          height: 400px;
+        }
+      }
+      
+      @media screen and (min-width: 768px){
+        .hero-section {
+          width: 768px;
+          height: 400px;
+        }
+      }
+
+      @media screen and (min-width: 1200px){
+        .hero-section {
+          width: 1200px;
+          height: 600px;
+        }
+      }

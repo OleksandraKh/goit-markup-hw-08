@@ -1,22 +1,69 @@
 .team-title {
     @extend %text-title;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+      @media screen and (min-width: 1200px){
+        
+        padding-top: 94px;
+        padding-bottom: 50px;
+        
+      }
   }
 
-  .team {
+  .team-set {
+    @extend %list;
+
+    @media screen and (min-width: 768px){
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    @media screen and (min-width: 1200px){
+      display: flex;
+      flex-wrap: wrap;
+      // margin: -15px;
+    }
+  }
   
-   &-card {
+  .team-card {
     // flex-wrap: wrap;
-    margin-bottom: 30px;
+    
     background:$primaryWhite-color;
     box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 1px 3px rgba(0, 0, 0, 0.12);
   
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
+      padding-top: 0;
+      padding-bottom: 0;
+      
+        @media screen and (min-width: 480px){
+        width: 450px; 
+          margin-bottom: 30px;
+        }
+          @media screen and (min-width: 768px){
+            width: 354px; 
+            width: calc((100% - 4 * 15px) / 2);
+            margin: 15px;
+            }
+              @media screen and (min-width: 1200px){
+                width: 270px; 
+                width: calc((100% - 6 * 10px) / 4);
+                margin: 10px;
+                &:first-child {
+                  margin-right: 0px;
+                }
 
-&-subtitle {
+              &:last-child {
+                margin-right: 0px;
+              }
+            }
+            
+              
+            }
+
+.team{
+
+              &-subtitle {
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
@@ -26,6 +73,7 @@
     font-weight: 500;
     font-size: 16px;
   }
+
 &-text {
     margin-left: auto;
     margin-right: auto;
@@ -38,9 +86,11 @@
 
   
 &-icon {
+  @extend %list;
     display: flex;
     justify-content: center;
-  
+    margin-left: auto;
+    margin-right: auto;
     padding-bottom: 24px;
     
   }
@@ -53,6 +103,19 @@
     background-size: contain;
   }
 }
+
+
+img {
+  @media screen and (min-width: 480px){
+    width: 450px; 
+    }
+      @media screen and (min-width: 768px){
+        width: 354px; 
+    }
+          @media screen and (min-width: 1200px){
+            width: 270px; 
+    }
+}  
   
 .icon-link {
     display: flex;
