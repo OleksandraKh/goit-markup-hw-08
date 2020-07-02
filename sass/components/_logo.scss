@@ -1,7 +1,8 @@
 .header-logo {
     @extend %style-logo;
+    @extend %list;
     color: $accent-color;
-        
+    text-decoration: none;    
     .accent {
       color: $titleText-color;
     }
@@ -9,11 +10,8 @@
   }
 
   @media screen and (min-width: 480px){
-       .header-logo {
-            padding-top: 16px;
-            padding-left: 15px;
-        }
-    
+       
+      }    
   @media screen and (min-width: 768px){
         .header-logo {
             padding-top: 26px;
@@ -31,7 +29,7 @@
   .footer-logo {
     @extend %style-logo;
     color: $accent-color;
-   
+    text-decoration: none;
     .accent {
       color: $primaryWhite-color;
     }

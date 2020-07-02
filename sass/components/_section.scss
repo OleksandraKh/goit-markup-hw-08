@@ -1,22 +1,37 @@
 .section {
     margin: 0;
     padding-top: 60px;
-    // padding-bottom: 60px;
-    border: 2px;
+    padding-bottom: 0;
+    // border: 2px;
   }
 
   .logo-section{
-      width: 480px;
       height: 60px;
       margin: 0;
+      padding-top: 16px;
+      padding-left: 15px;
+
+      @media screen and (min-width: 768px){
+        width: 768px;
+        height: 80px;
+        margin: 0;
+        padding-top: 26px;
+        padding-left: 15px;
+      }
+      
+      @media screen and (min-width: 1200px){
+          width: 1200px;
+          height: 80px;
+          margin: 0;
+          padding-top: 25px;
+          padding-left: 15px;
+      }
   }
-  
+ 
+
   .hero-section {
-    // max-width: 1600px;
-    height: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    // padding-bottom: 60px;
+    margin: 0;
+    padding-bottom: 0;
     background-color: $primaryText-color;
     background-image: linear-gradient(
         to right,
@@ -26,3 +41,28 @@
       url("../images/header_img.jpg");
       text-align: center;
   }
+  @media screen and (min-width: 480px){
+  
+    .hero-section {
+      width: 480px;
+      height: 400px;
+      
+    }
+  }
+    
+      
+@media screen and (min-width: 768px){
+  .hero-section {
+      width: 768px;
+      height: 400px;
+  }
+ }
+
+@media screen and (min-width: 1200px){
+  .hero-section {
+      width: 1600px;
+      height: 600px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+}
