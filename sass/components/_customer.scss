@@ -1,18 +1,17 @@
 .customer-title {
-  @extend %text-title;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-@media screen and (min-width: 1200px){
-  
-  padding-top: 94px;
-  padding-bottom: 50px;
-  
-}
+    @extend %text-title;
+
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+      @media screen and (min-width: 1200px){
+        
+        padding-top: 94px;
+        padding-bottom: 50px;
+      }
   }
   
-    
-
   .customer-set {
     @extend %list;
 
@@ -24,15 +23,17 @@
     @media screen and (min-width: 1200px){
       display: flex;
       flex-wrap: wrap;
-      // margin: -15px;
     }
+  }
 
+.customer{
 
-    
   &-logo {
 // flex-basis: 50%;
-      width: calc((100% - 4 * 15px) / 2);
-      margin: 15px;
+margin-left: auto;
+margin-right: auto;
+margin-top: 30px;
+margin-bottom: 10px;
     
     // width: 210px;
     height: 90px;
@@ -48,11 +49,8 @@
     border: 1px solid $accent-color;
     fill: $accent-color;
   }
-
-  //  &:first-child {
-  //   margin-left: 0;
-  // }
- }  
+}
+  
 
 
   &-link {
@@ -65,7 +63,7 @@
     justify-content: center;
     fill: inherit;
   }
-}
+
 
 .icon{
 
@@ -98,6 +96,5 @@
         width: 88px;
         height: 45px;
   }
-
-
+}
 }

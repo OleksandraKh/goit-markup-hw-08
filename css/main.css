@@ -878,9 +878,11 @@ summary {
   }
 }
 
-.customer-set-logo {
-  width: calc((100% - 4 * 15px) / 2);
-  margin: 15px;
+.customer-logo {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 10px;
   height: 90px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -893,12 +895,12 @@ summary {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.customer-set-logo:hover, .customer-set-logo:focus {
+.customer-logo:hover, .customer-logo:focus {
   border: 1px solid #2196f3;
   fill: #2196f3;
 }
 
-.customer-set-link {
+.customer-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -914,32 +916,32 @@ summary {
   fill: inherit;
 }
 
-.icon-logo_1 {
+.customer .icon-logo_1 {
   width: 44px;
   height: 49px;
 }
 
-.icon-logo_2 {
+.customer .icon-logo_2 {
   width: 40px;
   height: 52px;
 }
 
-.icon-logo_3 {
+.customer .icon-logo_3 {
   width: 41px;
   height: 42px;
 }
 
-.icon-logo_4 {
+.customer .icon-logo_4 {
   width: 79px;
   height: 42px;
 }
 
-.icon-logo_5 {
+.customer .icon-logo_5 {
   width: 59px;
   height: 47px;
 }
 
-.icon-logo_6 {
+.customer .icon-logo_6 {
   width: 88px;
   height: 45px;
 }
