@@ -1,14 +1,15 @@
 .team-title {
-    @extend %text-title;
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-      @media screen and (min-width: 1200px){
-        
-        padding-top: 94px;
-        padding-bottom: 50px;
-        
-      }
+  @extend %text-title;
+
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+
+    @media screen and (min-width: 1200px){
+      
+      padding-top: 94px;
+      padding-bottom: 50px;
+    }
   }
 
   .team-set {
