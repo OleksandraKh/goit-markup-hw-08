@@ -1,12 +1,47 @@
+footer {
+
+    margin: 0;
+
+    text-align: center;
+    justify-content: center;
+    // margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #2f303a;
+
+    @media screen and (min-width: 480px){
+        width: 480px;
+        height: 603px; 
+        }
+    @media screen and (min-width: 768px){
+        
+        width: 768px;
+        height: 463px;
+      
+    }
+
+    @media screen and (min-width: 1170px){
+      
+        width: 1600px;
+        height: 252px;
+            }
+  }
+
 .address {
-    // display: block;
-    
     margin-left: auto;
     margin-right: auto;
     align-items: center;
     justify-content: center;
     @extend %link;
-        
+    @media screen and (min-width: 768px){
+        display: block;
+        padding-left: 76px;
+        padding-top: 60px;
+    }
+          @media screen and (min-width: 1170px){
+           
+
+          } 
     }
 
   .footer-text {
@@ -29,6 +64,9 @@
     // align-items: center;
     padding-bottom: 60px;
     padding-top: 60px;
+    
+
+
     &-title {
         padding-top: 20px;
         font-style: normal;
@@ -85,6 +123,7 @@
     @extend %list;
     display: flex;
     margin-right: 0;
+    padding-bottom: 60px;
     margin-top: 0;
     margin-bottom: 0;
     justify-content: center;
@@ -94,7 +133,7 @@
     // display: flex;
     margin-right: 10px;
     
-    margin-bottom: 60px;
+    
     text-align: center;
 
         &:last-child {
@@ -135,17 +174,23 @@
   
   .flex-bottom {
     // display: inline;
-    display: flex;
-    flex-wrap: wrap;
+    // display: flex;
+    // flex-wrap: wrap;
     justify-content: center;
-   
+    @media screen and (min-width: 768px){
+        
+    }
+          @media screen and (min-width: 1170px){
+          
+
+          }
     // margin-top: 0;
     // margin-bottom: 0;
     // padding-top: 56px;
     // padding-bottom: 20px;
 
-    & > h2 {
-        // margin-bottom: 0;
+   h2 {
+        margin: 0;
         padding-bottom: 20px;
     }
   }
@@ -154,7 +199,7 @@
     // display: inline-flex;
   
     margin-right: auto;
-    margin-top: 21px;
+    margin-top: 0;
     margin-bottom: 0;
     justify-content: center;
   }
@@ -164,8 +209,8 @@
     
         .mail-btn {
             margin-right: auto;
-            margin-top: 0;
-            margin-bottom: 0;
+            margin-top: 20px;
+            margin-bottom: 20px;
             width: 450px;
             height: 50px;
         
