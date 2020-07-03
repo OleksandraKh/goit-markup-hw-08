@@ -1,0 +1,29 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    margin: 0;
+    background-color: $primaryWhite-color;
+    color: $titleText-color;
+    font-family: $fontFamily;
+    letter-spacing: 0.03em;
+  }
+  
+  // .portfolio::after,
+  // .studio::after {
+  //   content: "";
+  //   display: block;
+  //   width: 100%;
+  //   height: 4px;
+  //   position: absolute;
+  //   bottom: -1px;
+  //   background-color: $accent-color;
+  //   border-radius: 2px;
+  // }

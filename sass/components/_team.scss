@@ -6,65 +6,60 @@
   margin-right: auto;
 
     @media screen and (min-width: 1200px){
-      
       padding-top: 94px;
       padding-bottom: 50px;
     }
-  }
+}
 
   .team-set {
     @extend %list;
+    justify-content: center;
+      @media screen and (min-width: 768px){
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;
+      }
 
-    @media screen and (min-width: 768px){
-      display: flex;
-      flex-wrap: wrap;
-    }
-
-    @media screen and (min-width: 1200px){
-      display: flex;
-      flex-wrap: wrap;
-      // margin: -15px;
-    }
+      @media screen and (min-width: 1200px){
+        display: flex;
+        flex-wrap: wrap;
+        margin: -10px;
+      }
   }
   
   .team-card {
     // flex-wrap: wrap;
     
-    background:$primaryWhite-color;
-    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
-      0px 1px 3px rgba(0, 0, 0, 0.12);
-          width: 450px; 
-          margin-bottom: 30px;
-      padding-top: 0;
-      padding-bottom: 0;
-      
-        // @media screen and (min-width: 480px){
-        
-        // }
+        background:$primaryWhite-color;
+        box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+          0px 1px 3px rgba(0, 0, 0, 0.12);
+        // width: 450px; 
+        margin-bottom: 30px;
+        padding-top: 0;
+        padding-bottom: 0;
+
           @media screen and (min-width: 768px){
             width: 354px; 
             width: calc((100% - 4 * 15px) / 2);
             margin: 15px;
-            }
+          }
               @media screen and (min-width: 1200px){
                 width: 270px; 
                 width: calc((100% - 6 * 10px) / 4);
                 margin: 10px;
-                &:first-child {
-                  margin-right: 0px;
-                }
+                  &:first-child {
+                    margin-right: 0px;
+                  }
 
-              &:last-child {
-                margin-right: 0px;
-              }
-            }
-            
-              
-            }
+                  &:last-child {
+                    margin-right: 0px;
+                  }
+                }
+  }
 
 .team{
 
-              &-subtitle {
+  &-subtitle {
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
@@ -75,54 +70,53 @@
     font-size: 16px;
   }
 
-&-text {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0;
-    margin-bottom: 10px;
-    text-align: center;
-    color: $primaryText-color;
-    font-size: 16px;
+  &-text {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 0;
+      margin-bottom: 10px;
+      text-align: center;
+      color: $primaryText-color;
+      font-size: 16px;
   }
 
   
-&-icon {
-  @extend %list;
-    display: flex;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 24px;
-    
+  &-icon {
+    @extend %list;
+      display: flex;
+      justify-content: center;
+      margin-left: auto;
+      margin-right: auto;
+      padding-bottom: 24px;
   }
 
-  &-icon-instagram,
-  &-icon-twitter,
-  &-icon-facebook,
-  &-icon-linkedin{
-    width: 20px;
-    background-size: contain;
-  }
+      &-icon-instagram,
+      &-icon-twitter,
+      &-icon-facebook,
+      &-icon-linkedin{
+        width: 20px;
+        background-size: contain;
+      }
 }
 
 
 img {
-  @media screen and (min-width: 480px){
-    width: 450px; 
-    }
+  margin: auto;
+  @extend %img;
+  
       @media screen and (min-width: 768px){
-        width: 354px; 
+        width: 357px; 
     }
           @media screen and (min-width: 1200px){
             width: 270px; 
     }
 }  
   
-.icon-link {
-    display: flex;
-    &:first-child {
-    margin-left: 0;
-  }
+    .icon-link {
+        display: flex;
+        &:first-child {
+        margin-left: 0;
+      }
 }
  
 .team-link {
