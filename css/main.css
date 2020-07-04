@@ -1,11 +1,11 @@
-.customer-card, .address {
+.link, .contact-navigation .link, .customer-card, .address {
   display: block;
   margin-top: 0;
   margin-bottom: 0;
   text-decoration: none;
 }
 
-.header-logo, .feature-set, .divace-set, .team-set, .team-icon, .customer-set, .social {
+.navigation-set, .header-logo, .feature-set, .divace-set, .team-set, .team-icon, .customer-set, .social {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -15,6 +15,18 @@
   margin-top: 0;
   margin-bottom: 0;
   visibility: hidden;
+}
+
+.contact-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  line-height: 1.14;
+  color: #757575;
 }
 
 .header-logo, .footer-logo {
@@ -333,6 +345,22 @@ body {
   letter-spacing: 0.03em;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
+.portfolio::after,
+.studio::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  bottom: -1px;
+  background-color: #2196f3;
+  border-radius: 2px;
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -349,6 +377,7 @@ body {
 @media screen and (min-width: 768px) {
   .container {
     width: 768px;
+    position: relative;
   }
 }
 
@@ -408,7 +437,7 @@ body {
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
-  width: 480px;
+  max-width: 1600px;
   height: 400px;
   padding-bottom: 0;
   background-color: #757575;
@@ -477,6 +506,12 @@ body {
   background-color: transparent;
 }
 
+@media screen and (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
+}
+
 .menu-button .icon-menu {
   display: none;
 }
@@ -490,11 +525,94 @@ body {
 }
 
 .menu-container {
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .menu-container {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.navigation-set {
+  padding-top: 62px;
+  padding-bottom: 60px;
+}
+
+.navigation-item {
+  position: relative;
+  padding-top: 32px;
+}
+
+.link {
+  color: #212121;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link:hover, .link:focus {
+  color: #2196f3;
+  fill: #2196f3;
+}
+
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+}
+
+.contact-navigation {
+  padding-bottom: 16px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-style: 400;
+  font-size: 21px;
+}
+
+.contact-navigation .link {
+  color: #212121;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-navigation .link:hover, .contact-navigation .link:focus {
+  color: #2196f3;
+  fill: #2196f3;
+}
+
+.contact-navigation .icon-mail {
+  height: 12px;
+  margin-right: 10px;
+  background-size: contain;
+}
+
+.contact-navigation .icon-telefon {
+  width: 10px;
+  height: 15px;
+  margin-right: 10px;
+}
+
+.menu-container {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
   width: 100%;
+  height: 453px;
   padding: 20px;
   text-align: center;
   background-color: #FFFFFF;
@@ -573,6 +691,283 @@ body {
   background-color: #ffffff;
   color: #2196f3;
   border-color: #2196f3;
+  outline: none;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 93px 15px;
+  background-color: rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  display: none;
+  pointer-events: none;
+}
+
+.vector {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-size: contain;
+  background-color: #ffffff;
+  fill: #212121;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  -webkit-transition-property: fill, border;
+  transition-property: fill, border;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.vector-icon {
+  position: absolute;
+  top: 8px;
+  -webkit-transform: translate(30%, -30%);
+          transform: translate(30%, -30%);
+  width: 11px;
+  border-radius: 50%;
+}
+
+.vector:hover, .vector:focus {
+  fill: #2196f3;
+  border-color: #2196f3;
+  outline: none;
+}
+
+.form {
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+  text-align: center;
+}
+
+@media screen and (min-width: 480px) {
+  .form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 450px;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 528px;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.form-title {
+  padding-bottom: 30px;
+  font-weight: 500;
+  margin: 0;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+}
+
+.form-group {
+  position: relative;
+  display: block;
+  margin-bottom: 28px;
+}
+
+.form-input {
+  padding: 12px 42px;
+  font: inherit;
+  width: 100%;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+  -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-label {
+  position: absolute;
+  top: 50%;
+  left: 42px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: -webkit-transform 250ms linear;
+  transition: -webkit-transform 250ms linear;
+  transition: transform 250ms linear;
+  transition: transform 250ms linear, -webkit-transform 250ms linear;
+}
+
+.form-policy {
+  position: absolute;
+  margin-left: 15px;
+  font-size: 14px;
+  line-height: 24px;
+  color: #757575;
+}
+
+@media screen and (min-width: 1200px) {
+  .form-policy {
+    margin-left: 23px;
+  }
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 19px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 15px;
+}
+
+.form-group:focus-within > .icon {
+  fill: #2196f3;
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+  color: #2196f3;
+  font-size: 12px;
+  line-height: 14px;
+  left: 0px;
+  -webkit-transform: translateY(-280%);
+          transform: translateY(-280%);
+  outline: none;
+}
+
+.form-input:focus,
+textarea:focus {
+  border-color: #2196f3;
+}
+
+.checkbox-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.checkbox-group .checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+
+.checkbox-group .checkbox:checked + .icon-mark {
+  background-color: #2196f3;
+  border-color: #2196f3;
+  fill: #ffffff;
+}
+
+.icon-mark {
+  display: inline-block;
+  position: absolute;
+  border-radius: 2px;
+  border: 2px solid #212121;
+  width: 16px;
+  height: 15px;
+  fill: #ffffff;
+  -webkit-transition-property: fill, border;
+  transition-property: fill, border;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-link {
+  color: #2196f3;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-link:focus, .form-link:hover {
+  color: #212121;
+}
+
+textarea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  resize: none;
+  margin-bottom: 20px;
+  padding: 12px 16px;
+  width: 100%;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+  outline: none;
+  -webkit-transition-property: border;
+  transition-property: border;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-label-comment {
+  position: absolute;
+  top: 20%;
+  left: 16px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: -webkit-transform 250ms linear;
+  transition: -webkit-transform 250ms linear;
+  transition: transform 250ms linear;
+  transition: transform 250ms linear, -webkit-transform 250ms linear;
+}
+
+textarea:focus + .form-label-comment,
+textarea:not(:placeholder-shown) + .form-label-comment {
+  color: #2196f3;
+  font-size: 12px;
+  line-height: 14px;
+  left: 0px;
+  -webkit-transform: translateY(-280%);
+          transform: translateY(-280%);
   outline: none;
 }
 

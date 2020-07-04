@@ -18,14 +18,14 @@
 }
 
 
-// %style-header{
-//     display: flex;
-//     align-items: center;
-//     font-size: 14px;
-//     line-height: 1.14;
-//     color: $primaryText-color;
+%style-header{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 1.14;
+    color: $primaryText-color;
     
-// }
+}
 
 %style-logo{
   font-family: $fontFamily;
