@@ -19,6 +19,19 @@
   }
 }
 
+.footer-container {
+    @media screen and (min-width: 1200px){
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 1200px;
+    }
+}
+
 // @media screen and (min-width: 1170px){
 //   .container{ 
 //     width: 1600px;

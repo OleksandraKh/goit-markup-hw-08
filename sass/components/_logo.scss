@@ -1,6 +1,8 @@
 .header-logo {
     @extend %style-logo;
     @extend %list;
+   
+    padding-top: 16px;
     color: $accent-color;
     text-decoration: none;    
     .accent {
@@ -30,7 +32,11 @@
     @extend %style-logo;
     color: $accent-color;
     text-decoration: none;
-    
+       
+    @media screen and (min-width: 1200px){
+          font-size: 24px;
+        }
+
     .accent {
       color: $primaryWhite-color;
     }

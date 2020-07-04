@@ -22,6 +22,17 @@
           <a href="./index.html" class="header-logo link">
             Web <span class="accent"> Studio </span></a
           >
+          <button type="button" class="menu-button is-open" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+            <svg width="40" height="40" aria-label="Переключение мобильного меню"> 
+              <use class="icon-close" href="./images/menu-icon.svg#icon-close_24px"></use>
+              <use class="icon-menu" href="./images/menu-icon.svg#icon-menu_40px"></use>
+            </svg>
+          </button>
+          <div class="menu-container" id="menu-container" data-menu>
+
+
+
+          </div>
           <!-- <ul class="navigation-set list">
             <li class="navigation-item">
               <a href="./index.html" class="studio link">Студия</a>
@@ -406,7 +417,7 @@
 
     <!-- Подвал -->
     <footer>
-      <div class="container">
+      <div class="footer-container">
         <div class="address">
           <a href="./index.html" class="footer-logo link">
             Web <span class="accent"> Studio </span>
@@ -478,7 +489,7 @@
             </form>
           </div>
         </div>
-      <!-- </div> -->
+      </div>
       <p class="autor">2020 | Developed by GoIT Students</p>
     </footer>
 
@@ -549,5 +560,6 @@
       </form>
     </div>
     <script src="./Js/modal.js"></script>
+    <script src="./Js/menu.js"></script>
   </body>
 </html>

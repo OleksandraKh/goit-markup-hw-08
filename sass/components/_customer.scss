@@ -1,28 +1,25 @@
 .customer-title {
-  
-    @extend %text-title;
-    @media screen and (min-width: 480px){
-      padding-top: 60px;
-        padding-bottom: 30px; 
-      }
-        @media screen and (min-width: 768px){
-          padding-top: 60px;
-          padding-bottom: 30px; 
-      }
+ @extend %text-title;
+ 
+ padding-top: 60px;
+  padding-bottom: 30px; 
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+       
             @media screen and (min-width: 1170px){
               padding-top: 94px;
               padding-bottom: 50px; 
       }
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-
   }
   
   .customer-set {
     
     @extend %list;
+
     @media screen and (min-width: 480px){
+      display: flex;
+      flex-wrap: wrap;
       margin: -15px;}
     @media screen and (min-width: 768px){
         display: flex;
@@ -64,7 +61,7 @@ margin-right: 0;
       width: calc((100% - 4 * 15px) / 2);
           margin: 15px;
           &:nth-child(n + 5) {
-            margin: 0px;
+            margin-bottom: 0px;
           }
         }  
 

@@ -1,24 +1,46 @@
 .page-header {
-  
+ position: relative; 
   border-bottom: 2px solid #ececec;
 }
 
 .page-header .nav{
+  
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 60px;    
+  min-height: 60px;    
       
 @media screen and (min-width: 768px){
  
-    height: 80px;
+  min-height: 80px;
 }
 
 @media screen and (min-width: 1200px){
-   height: 80px;
+  min-height: 80px;
   }
 }
 
+.menu-button{
+  display: inline-flex;
+  
+  // margin-left: auto;
+  padding-left: 236px;
+  padding-top: 10px;
+  border: none;
+  background-color: transparent;
+}
+  .menu-button .icon-menu{
+      display: none;
+    }
+
+    .menu-button.is-open .icon-menu{
+      display: block;
+      
+    }
+
+    .menu-button.is-open .icon-close{
+      display: none;
+    }
 
 // .navigation-set{
 //   @extend %style-header;
