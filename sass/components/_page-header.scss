@@ -61,17 +61,32 @@
     display: flex;
   }
 }
+
 .navigation-set{
   @extend %list;
-  // @extend %style-header;
+ 
   padding-top: 62px;
   padding-bottom: 60px;
+
+  @media screen and (min-width: 768px){
+ 
+  display: flex;
+   align-items: center;
+   font-size: 14px;
+   line-height: 1.14;
+   color: $primaryText-color;
+  }
 }
   .navigation-item{
       position: relative;
-      // margin-left: 85px;
       padding-top: 32px;
-      // padding-bottom: 50px;
+      
+
+      @media screen and (min-width: 768px){
+ 
+       margin-left: 85px;
+       padding-bottom: 50px;
+      }
            
     }
 
